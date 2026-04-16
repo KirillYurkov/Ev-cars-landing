@@ -100,6 +100,9 @@ video{
   color: var(--primary-color);
   text-transform: uppercase;
   text-align: center;
+     @media screen and (max-width:1440px) {
+        font-size: clamp(3.375rem, -8rem + 36.4vi, 14.75rem);
+    }
 }
 .title--h2 {
   font-family: var(--font-family);
@@ -138,6 +141,7 @@ video{
   font-size: 14px;
   line-height: 160%;
   color: var(--desc);
+
 }
 .desc--h2 {
   font-family: var(--font-family);

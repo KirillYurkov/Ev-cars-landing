@@ -9,9 +9,13 @@
     color: #fff;
     margin-bottom: 60px;
   }
-  &__subtitle {
+  &__desc {
     color: #fff;
     margin-bottom: 16px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 236px;
+    letter-spacing: 0.04em;
   }
   &__images {
     display: flex;
@@ -31,7 +35,7 @@
   }
   &__images--group {
     display: flex;
-    flex:1 1 auto;
+    flex: 1 1 auto;
     column-gap: 20px;
   }
 }
