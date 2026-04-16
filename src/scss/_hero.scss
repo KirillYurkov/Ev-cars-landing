@@ -12,13 +12,12 @@
     text-align: center;
     color: var(--background-color-3);
     margin-bottom: 75px;
-       @media screen and (max-width:1440px) {
-        font-size: clamp(3.375rem, -8rem + 36.4vi, 14.75rem);
-        padding-top: 150px;
-      }
-      @media screen and (max-width:768px) {
+    @media screen and (max-width: 1440px) {
+      font-size: clamp(3.375rem, -8rem + 36.4vi, 14.75rem);
       padding-top: 150px;
-        
+    }
+    @media screen and (max-width: 768px) {
+      padding-top: 150px;
     }
   }
   &__img {
@@ -35,19 +34,19 @@
     border-top: 1px solid var(--background-color-3);
     padding: 75px 0px 0px;
     width: 100%;
-    @media screen and (max-width:768px) {
-        padding-top: 0px;
+    @media screen and (max-width: 768px) {
+      padding-top: 0px;
     }
   }
   &__item {
     display: flex;
     align-items: center;
-    @media screen and (max-width:1440px) {
-        // display: flex;
-        // flex-direction: column;
-        // align-items: center;
-        flex-wrap:wrap;
-        // padding:clamp(1.25rem, -2.188rem + 11vi, 4.688rem) 0px 0px;
+    @media screen and (max-width: 1440px) {
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      flex-wrap: wrap;
+      // padding:clamp(1.25rem, -2.188rem + 11vi, 4.688rem) 0px 0px;
     }
   }
   &__item-data {
@@ -57,7 +56,7 @@
     text-transform: uppercase;
     color: var(--primary-color);
     margin-right: 24px;
-    @media screen and (max-width:1440px) {
+    @media screen and (max-width: 1440px) {
       font-size: clamp(2rem, -1rem + 9.6vi, 5rem);
     }
   }
@@ -67,8 +66,8 @@
     font-size: 24px;
     color: var(--subtext-color);
     max-width: 160px;
-    @media screen and (max-width:1440px) {
-        font-size: clamp(1rem, 0.5rem + 1.6vi, 1.5rem);
+    @media screen and (max-width: 1440px) {
+      font-size: clamp(1rem, 0.5rem + 1.6vi, 1.5rem);
     }
   }
 }
