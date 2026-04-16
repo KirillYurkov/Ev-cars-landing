@@ -1,0 +1,43 @@
+.charger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 128px;
+  padding-bottom: 128px;
+  &__subtitle{
+    margin-bottom: 16px;
+  }
+  &__title{
+    margin-bottom: 45px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  &-card{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &-card__desc{ 
+    margin-top: auto;
+  }
+  &-card__price{
+    display: flex;
+  }
+  &-card__price--orig {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--subtext-color);
+    margin-right: 9px;
+  }
+  &-card__price--cur {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--primary-color);
+  }
+}

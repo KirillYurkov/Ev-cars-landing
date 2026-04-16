@@ -1,0 +1,32 @@
+[
+  {
+    "image": "01.webp",
+    "image2": "01@2x.webp",
+    "title": "Home Smart Charger",
+    "desc": "A lightweight, travel‑friendly Level 1 charger designed for convenience. Plugs into standard wall outlets.",
+    "price": {
+      "original": 999,
+      "current": 599
+    }
+  },
+  {
+    "image": "02.webp",
+    "image2": "02@2x.webp",
+    "title": "Portable EV Charger",
+    "desc": "A lightweight, travel‑friendly Level 1 charger designed for convenience. Plugs into standard wall outlets.",
+    "price": {
+      "original": 599,
+      "current": 299
+    }
+  },
+  {
+    "image": "03.webp",
+    "image2": "03@2x.webp",
+    "title": "Ultra‑Fast Public Charging Station",
+    "desc": "A high‑power Level 3 DC fast charger for public and commercial locations. Equipped with dual ports.",
+    "price": {
+      "original": 20999,
+      "current": 12999
+    }
+  }
+]
