@@ -1,0 +1,69 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  padding-top: 128px;
+  padding-bottom: 128px;
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    margin-bottom: 32px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 550px;
+    flex: 1;
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-user_name,
+    &-user_lastname,
+    &-email,
+    &-message {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      & input {
+        width: 242px;
+        background: var(--background-color-2);
+        border: none;
+        padding: 12px;
+      }
+      & input::placeholder {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 18px;
+        color: var(--subtext-color);
+      }
+      & textarea {
+        background: var(--background-color-2);
+        border: none;
+        padding: 12px 12px 84px 12px;
+        resize: none;
+      }
+      & textarea::placeholder {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 18px;
+        color: var(--subtext-color);
+      }
+    }
+    &-btn {
+      background-color: var(--black);
+      color: var(--primary);
+      align-self: flex-start;
+      padding: 18px 24px;
+      &:hover {
+        color: var(--black);
+        background-color: var(--primary);
+        border: 1px solid transparent;
+      }
+    }
+  }
+}
