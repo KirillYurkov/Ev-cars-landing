@@ -20,7 +20,13 @@ import svgSprite from "gulp-svg-sprite"; //создание svg файла с г
 //массивы путей для return gulp.src
 const cssFiles = ["./src/css/swiper-bundle.min.css"];
 const scssFiles = ["./src/scss/**/*.scss"];
-const jsFiles = ["./src/js/burger.js","./src/js/chargers.js","./src/js/send_mail.js","./src/js/play_video.js","./src/js/main.js"];
+const jsFiles = [
+  "./src/js/burger.js",
+  "./src/js/chargers.js",
+  "./src/js/send_mail.js",
+  "./src/js/play_video.js",
+  "./src/js/main.js",
+];
 const jsLibsFiles = ["./src/js/js_libs/swiper-bundle.js"];
 const jsonFiles = ["./src/json_files/*.json"];
 const phpFiles = ["./src/*.php"];
@@ -57,11 +63,11 @@ const paths = {
   json: {
     dest: "./app/json_files/",
   },
-  php:{
-    dest:"./app/",
+  php: {
+    dest: "./app/",
   },
-  phpMailer:{
-    dest:"./app/PHPMailer-master/",
+  phpMailer: {
+    dest: "./app/PHPMailer-master/",
   },
 };
 // Удаление папки Арр
@@ -76,7 +82,7 @@ export function htmlInclude() {
       fileInclude({
         prefix: "@@",
         basepath: "@file",
-      })
+      }),
     )
     .pipe(gulp.dest([paths.htmls.dest]))
     .pipe(browserSync.stream());
@@ -113,17 +119,17 @@ export function scss() {
         cascade: false,
         grid: true,
         overrideBrowserslist: ["last 5 versions"],
-      })
+      }),
     )
     .pipe(
       cleanCSS({
         level: 2,
-      })
+      }),
     )
     .pipe(
       rename({
         suffix: ".min",
-      })
+      }),
     )
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest([paths.styles.dest]))
@@ -160,7 +166,7 @@ export function svgMono() {
               svgo: {
                 //плагин для обработки svg
                 plugins: [
-                "removeStyleElement",
+                  "removeStyleElement",
                   {
                     name: "removeAttrs",
                     params: {
@@ -172,7 +178,7 @@ export function svgMono() {
             },
           ],
         },
-      })
+      }),
     )
     .pipe(gulp.dest([paths.svgMono.dest]));
 }
@@ -187,7 +193,7 @@ export function svgMulti() {
             sprite: "../svg-multi.svg",
           },
         },
-      })
+      }),
     )
     .pipe(gulp.dest([paths.svgMulti.dest]));
 }
@@ -198,7 +204,7 @@ export function scripts() {
     .pipe(
       babel({
         presets: ["@babel/env"],
-      })
+      }),
     )
     .pipe(sourcemaps.init())
     .pipe(uglify())
@@ -213,14 +219,14 @@ export function scriptsLibs() {
     .pipe(
       babel({
         presets: ["@babel/env"],
-      })
+      }),
     )
     .pipe(sourcemaps.init())
     .pipe(uglify())
     .pipe(
       rename({
         suffix: ".min",
-      })
+      }),
     )
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(paths.scripts.dest))
@@ -232,17 +238,17 @@ export function json() {
     .src(jsonFiles)
     .pipe(gulp.dest([paths.json.dest]))
     .pipe(browserSync.stream());
-  }
-  // php
-  export function php(){
-    return gulp
+}
+// php
+export function php() {
+  return gulp
     .src(phpFiles)
     .pipe(gulp.dest([paths.php.dest]))
     .pipe(browserSync.stream());
 }
-  // phpMailer
-  export function phpMail(){
-    return gulp
+// phpMailer
+export function phpMail() {
+  return gulp
     .src(phpMailer)
     .pipe(gulp.dest([paths.phpMailer.dest]))
     .pipe(browserSync.stream());
@@ -274,11 +280,11 @@ const dev = gulp.series(
   delApp,
   fontsToWoff2,
   htmlInclude,
-  gulp.parallel(css, scss, scripts, scriptsLibs, svgMono,svgMulti,json),
+  gulp.parallel(css, scss, scripts, scriptsLibs, svgMono, svgMulti, json),
   imgToWebp,
   php,
   phpMail,
-  watcher
+  watcher,
 );
 export { dev };
 gulp.task("default", dev);
@@ -288,11 +294,11 @@ const prod = gulp.series(
   delApp,
   fontsToWoff2,
   htmlInclude,
-  gulp.parallel(css, scss, scripts, scriptsLibs, svgMono,svgMulti),
+  gulp.parallel(css, scss, scripts, scriptsLibs, svgMono, svgMulti),
   imgToWebp,
   php,
   phpMail,
-  watcher
+  watcher,
 );
 export { prod };
 gulp.task("prod", prod);

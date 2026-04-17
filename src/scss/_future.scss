@@ -4,12 +4,12 @@
   align-items: center;
   padding-top: 128px;
 
-  &__subtitle{
+  &__subtitle {
     margin-bottom: 16px;
     display: inline-flex;
   }
-  &__title{
-margin-bottom: 79px;
+  &__title {
+    margin-bottom: 79px;
   }
 }
 
@@ -27,6 +27,6 @@ margin-bottom: 79px;
   background: #000;
 }
 .swiper-pagination-bullet-active {
-    background: var(--swiper-pagination-color,var(--swiper-theme-color));
-    opacity: var(--swiper-pagination-bullet-opacity,1);
+  background: var(--swiper-pagination-color, var(--swiper-theme-color));
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
 }
